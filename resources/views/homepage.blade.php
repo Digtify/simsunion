@@ -30,7 +30,7 @@
                             <div class="value">N/A</div>
                         </div>
                         <div class="item">
-                            <a class="statistic-name">Follows sdsds</a>
+                            <a class="statistic-name">Follows</a>
                             <div class="value">N/A</div>
                         </div>
                     </div>
