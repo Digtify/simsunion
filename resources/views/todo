@@ -1,0 +1,15 @@
+    FEEDBACK:
+Logout mit Dropdown?
+Dokumentation [Was sollen nutzer können]
+
+[Homepage]:
+    - left -> your account overview (small) + 1 ad
+    - middle -> your feed
+    - right -> show random accounts to follow
+
+[Sign Up Procces]:
+    - register with [mail, name, password] -> go to user_information page.
+            1. Verify Mail
+            2. Follow Random People
+            3. Give Information -> [full_name, profile_picture, birthday, website_tip, sims_played_since]
+            4. Completed Page -> Login
