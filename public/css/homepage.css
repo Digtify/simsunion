@@ -16,7 +16,6 @@
   width: 25%;
   height: 100%;
   padding: 40px 10px 40px 30px;
-  position: fixed;
 }
 
 .wrapper .left-wrap .account {
@@ -105,7 +104,6 @@
 
 .wrapper .center-wrap {
   width: 50%;
-  margin-left: 25%;
   background-color: #f0f3f6;
   display: inline-table;
   margin-top: 40px;
@@ -195,7 +193,6 @@
 .wrapper .right-wrap {
   width: 25%;
   height: 100%;
-  position: fixed;
   right: 0;
   padding-top: 40px;
   padding-left: 10px;
@@ -384,7 +381,7 @@
 }
 
 .fullscreen .right-screen .center .form-register-l {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   padding: 30px 20px;
   border-radius: 3px;
@@ -420,5 +417,12 @@
   color: #70b8d0;
   border: 1px solid #70b8d0;
   border-radius: 3px;
+}
+
+@media screen and (min-width: 1150px) {
+  .wrapper {
+    width: 1150px;
+    margin: 0 auto;
+  }
 }
 

@@ -22,7 +22,7 @@
 
                 @if(Auth::check())
                 <div class="account" id="account_dropdown">
-                    <img src="/media/uploads/profile/{{ \App\System::getProfileImageByName(Auth::user()->username) }}" alt="Profile Image">
+                    <img src="/media/uploads/profile/{{ \App\System\System::getProfileImageByName(Auth::user()->username) }}" alt="Profile Image">
                 </div>
                 @else
                 <a class="login" href="/login">{{ trans('auth.login') }}</a>

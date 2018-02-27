@@ -41,11 +41,13 @@
                         @endforeach
                     @endif
 
-                    <label for="mail" class="support">{{ trans('auth.input.mail') }}</label>
-                    <input type="text" class="input{{ $errors->has('mail') ? ' input-error' : '' }}" id="mail" name="mail" value="" placeholder="{{ trans('auth.input.mail') }}" value="{{ old('mail') }}">
+                    <div class="form-2-line">
+                        <label for="mail" class="support">{{ trans('auth.input.mail') }}</label>
+                        <input type="text" class="input{{ $errors->has('mail') ? ' input-error' : '' }}" id="mail" name="mail" value="" placeholder="{{ trans('auth.input.mail') }}" value="{{ old('mail') }}">
 
-                    <label for="username" class="support">{{ trans('auth.input.name') }}</label>
-                    <input type="text" class="input" id="username" name="username" value="" placeholder="{{ trans('auth.input.name') }}">
+                        <label for="username" class="support">{{ trans('auth.input.name') }}</label>
+                        <input type="text" class="input" id="username" name="username" value="" placeholder="{{ trans('auth.input.name') }}">
+                    </div>
 
                     <label for="password" class="support">{{ trans('auth.input.password') }}</label>
                     <input type="password" class="input" id="password" name="password" value="" placeholder="{{ trans('auth.input.password') }}">

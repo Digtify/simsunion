@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\System as System;
+use App\System\System as System;
 use App\User;
+use App\System\Account\Settings as Settings;
 
 class AccountController extends Controller {
 
@@ -24,6 +25,17 @@ class AccountController extends Controller {
             $families = System::getFamilies(System::getUserIdByName($username), false);
 
             return view('account.categories.family', ['username' => $data['username'], 'data' => $data, 'families' => $families]);
+        } else {
+            return view('errors.404');
+        }
+    }
+
+    public static function showAccountSettings($username) {
+        if (User::where('username', '=', $username)->exists()) {
+            $data = System::getUserDataByName($username);
+            $settings = Settings::getSettings($username);
+
+            return view('account.settings', ['username' => $data['username'], 'data' => $data, 'settings' => $settings]);
         } else {
             return view('errors.404');
         }

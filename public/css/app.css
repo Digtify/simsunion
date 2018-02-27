@@ -10221,6 +10221,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 5px 0;
+  padding: 3px 0;
 }
 
 .header .dropdown-account .section a:hover .fa,

@@ -14,7 +14,7 @@
         <div class="left-wrap">
             <div class="account">
                 <div class="panel">
-                    <img src="/media/uploads/profile/{{ \App\System::fixProfileImage($user_data['image']) }}" alt="Profile Image">
+                    <img src="/media/uploads/profile/{{ \App\System\System::fixProfileImage($user_data['image']) }}" alt="Profile Image">
                 </div>
 
                 <div class="stats">
@@ -23,7 +23,7 @@
                     <div class="stats-wrap">
                         <div class="item">
                             <a href="/{{ Auth::user()->username }}" class="statistic-name">Posts</a>
-                            <div class="value">{{ count(\App\System::getPosts(Auth::user()->id, true)) }}</div>
+                            <div class="value">{{ count(\App\System\System::getPosts(Auth::user()->id, true)) }}</div>
                         </div>
                         <div class="item">
                             <a class="statistic-name">Follower</a>
@@ -45,11 +45,11 @@
             <div class="post post-resizable" data-route="{{ $post->type }}/{{ $post->route }}">
                 <div class="account">
                     <div class="profile-image">
-                        <img src="/media/uploads/profile/{{ \App\System::getProfileImageByName(\App\System::getUserById($post->author)->username) }}" alt="Image">
+                        <img src="/media/uploads/profile/{{ \App\System\System::getProfileImageByName(\App\System\System::getUserById($post->author)->username) }}" alt="Image">
                     </div>
                     <div class="user-info">
-                        <a href="/{{ \App\System::getUserById($post->author)->username }}" class="username">{{ \App\System::getUserById($post->author)->username }}</a>
-                        <div class="date">{{ \App\System::toDateFormatWithFormatted($post->created_at, true) }}</div>
+                        <a href="/{{ \App\System\System::getUserById($post->author)->username }}" class="username">{{ \App\System\System::getUserById($post->author)->username }}</a>
+                        <div class="date">{{ \App\System\System::toDateFormatWithFormatted($post->created_at, true) }}</div>
                     </div>
 
                     <div class="comment-wrap">
@@ -71,7 +71,7 @@
                 @foreach($users_suggested as $user)
                 @if($user->username != Auth::user()->username)
                 <div class="user-profile">
-                    <a href="/{{ $user->username }}"><img src="/media/uploads/profile/{{ \App\System::fixProfileImage($user->image) }}" alt="Profile Image"></a>
+                    <a href="/{{ $user->username }}"><img src="/media/uploads/profile/{{ \App\System\System::fixProfileImage($user->image) }}" alt="Profile Image"></a>
                     <div class="user-data">
                         <a href="/{{ $user->username }}" class="name">{{ $user->username }}</a>
                         <div class="follow-btn">Follow</div>

@@ -27,11 +27,11 @@
     <div class="navbar-left">
         <p class="name">{{ $username }}</p>
         <p class="joined"><i class="fa fa-calendar" aria-hidden="true"></i> {{ $data['created_at'] }}</p>
-        @if(\App\System::hasStatsSet($username, 'birthday'))
-            <p class="birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{ \App\System::getUserStats($username, 'birthday')->birthday }}</p>
+        @if(\App\System\System::hasStatsSet($username, 'birthday'))
+            <p class="birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{ \App\System\System::getUserStats($username, 'birthday')->birthday }}</p>
         @endif
-        @if(\App\System::hasStatsSet($username, 'website_anchor'))
-            <p class="website"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{ \App\System::getUserStats($username, 'website_anchor')->website_anchor }}" target="_blank">{{ \App\System::getUserStats($username, 'website_anchor')->website_anchor }}</a></p>
+        @if(\App\System\System::hasStatsSet($username, 'website_anchor'))
+            <p class="website"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{ \App\System\System::getUserStats($username, 'website_anchor')->website_anchor }}" target="_blank">{{ \App\System\System::getUserStats($username, 'website_anchor')->website_anchor }}</a></p>
         @endif
 
         <ul class="tab-nav">
@@ -53,8 +53,8 @@
                             <img src="media/uploads/profiles/code_logo.png" alt="Image">
                         </div>
                         <div class="user-info">
-                            <div class="username">{{ \App\System::getUserById($post->author)->username }}</div>
-                            <div class="date">{{ \App\System::toDateFormatWithFormatted($post->created_at, true) }}</div>
+                            <div class="username">{{ \App\System\System::getUserById($post->author)->username }}</div>
+                            <div class="date">{{ \App\System\System::toDateFormatWithFormatted($post->created_at, true) }}</div>
                         </div>
 
                         <div class="comment-wrap">

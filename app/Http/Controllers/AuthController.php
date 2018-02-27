@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
-use App\System as System;
+use App\System\Account\Settings;
+use App\System\System as System;
 use DB;
 use App\User;
 use Auth;
@@ -51,7 +52,7 @@ class AuthController extends Controller {
         ];
 
         User::create($data);
-        System::createUserStats($data);
+        Settings::createUserStats($data);
 
         return redirect('/register/verify-mail');
     }

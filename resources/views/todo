@@ -1,11 +1,5 @@
     FEEDBACK:
-Logout mit Dropdown?
 Dokumentation [Was sollen nutzer können]
-
-[Homepage]:
-    - left -> your account overview (small) + 1 ad
-    - middle -> your feed
-    - right -> show random accounts to follow
 
 [Sign Up Procces]:
     - register with [mail, name, password] -> go to user_information page.
@@ -13,3 +7,15 @@ Dokumentation [Was sollen nutzer können]
             2. Follow Random People
             3. Give Information -> [full_name, profile_picture, birthday, website_tip, sims_played_since]
             4. Completed Page -> Login
+
+    - check email/name instantly on register
+
+[Homepage]:
+    - left -> your account overview (small)
+    - middle -> your feed
+    - right -> show random accounts to follow
+    - in header: dropdown menu with [profile_name or smth, link to profile, settings, logout, ...] (example: twitter.com -> click on profile image)
+
+[ACCOUNT]:
+    - needed infos [follows, followers, posts_amount, all posts, profile image, (banner?), created_at, birthday, website_tip, more user-specified data you can imagine]
+    - quick possibility to add families, houses and posts
